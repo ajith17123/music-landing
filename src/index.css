@@ -1,7 +1,28 @@
+/* Global Reset & Base Styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* Native smooth scroll fallback */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure no stutter or conflicting scroll behaviors when Lenis is active */
+html.lenis,
+html.lenis body {
+  height: auto;
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
 }
 
 html, body, #root {
@@ -13,4 +34,3 @@ html, body, #root {
   font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-
