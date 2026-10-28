@@ -87,3 +87,4 @@ export const useSmoothScroll = () => {
 };
 
 export default useSmoothScroll;
+
